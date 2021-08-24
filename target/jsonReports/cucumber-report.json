@@ -1,0 +1,143 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-22T03:26:28.795Z",
+        "line": 15,
+        "name": "Verify if the place is being successfully getting added using AddPlaceAPI",
+        "description": "",
+        "id": "i-want-to-validate-add-place-api;verify-if-the-place-is-being-successfully-getting-added-using-addplaceapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3495000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Add place payload \"john vadentiy\" \"telugu\" \"nalapur\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"john vadentiy\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"telugu\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"nalapur\"",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinations.AddPlaceAPI.add_place_payload(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5222000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user calls \"addPlaceAPI\" with \"post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"addPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"post\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.AddPlaceAPI.user_calls_with_post_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the API call will get success code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinations.AddPlaceAPI.the_api_call_will_get_success_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2749000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "chech \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 6
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinations.AddPlaceAPI.chech_in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1885000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify \"john vadentiy\" from \"getPlaceAPI\" is matching with \"get\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"john vadentiy\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"getPlaceAPI\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"get\"",
+                  "offset": 59
+                }
+              ],
+              "location": "stepDefinations.AddPlaceAPI.verify_from_is_matching(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlaceAPI"
+          }
+        ]
+      }
+    ],
+    "name": "I want to validate Add place API",
+    "description": "",
+    "id": "i-want-to-validate-add-place-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/AddPlaceAPI.feature",
+    "tags": []
+  }
+]
